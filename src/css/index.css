@@ -1,0 +1,146 @@
+h1 {
+  margin: 0;
+  color: white;
+  line-height: 1;
+  font-weight: normal;
+  background: orange;
+  padding: 15px 20px;
+  border-radius: 7px 7px 0 0;
+  box-shadow: 0 0 40px 0 rgba(220, 120, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+#app {
+  max-width: 400px;
+  position: relative;
+  height: 100vh;
+  margin: auto;
+  padding-top: 120px;
+}
+
+#media-player {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: #fbfbfb;
+  border-top: white;
+  box-shadow: 0 0 40px 0 rgba(200, 120, 0, 0.3);
+  color: #333;
+}
+
+.controls {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls * {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.controls *:last-child {
+  margin-right: 0;
+}
+
+.controls .play-pause {
+  color: white;
+  background: orange;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls .play-pause:active {
+  background: #f4a000;
+}
+
+.time {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+}
+
+.listened {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  width: 50%;
+  background: orange;
+}
+
+#media-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 40px 0 rgba(220, 120, 0, 0.3);
+}
+
+#media-list ul li {
+  background: #fcfcfc;
+  cursor: pointer;
+  height: 64px;
+  overflow: hidden;
+  display: flex;
+  border-bottom: #f3f3f3 1px solid;
+}
+
+#media-list ul li > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#media-list ul li:hover {
+  background: #fafafa;
+}
+
+#media-list ul li.selected {
+  border-left: orange 3px solid;
+}
+
+#media-list ul li.selected > div {
+  margin-left: -3px;
+  margin-right: 3px;
+}
+
+#media-list .track-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#media-list .track-info .track-title {
+  color: #333333;
+  font-size: 1.2em;
+}
+
+#media-list .track-info .track-artist {
+  font-size: 0.8em;
+  color: gray;
+}
